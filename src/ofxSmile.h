@@ -9,7 +9,7 @@
 class ofxSmile
 {
 public:
-	static bool getSmile(ofImage img, float& amount)
+	static vector< pair<ofVec4f, float> > getSmile(ofImage img)
     {
 		img.setImageType(OF_IMAGE_GRAYSCALE);
 
@@ -17,26 +17,26 @@ public:
 
 		MPSmile smileFinder;
 
+    
 		VisualObject faces;
 
         RImage<float> rimage(floatPixels.getPixels(),
                              floatPixels.getWidth(),
                              floatPixels.getHeight());
 
-        bool smileFound = false;
-
-        amount = 0;
+        ofVec4f vec = ofVec4f(0, 0, 0, 0);
+        vector< pair<ofVec4f, float> > vecs;
 
 		if (!smileFinder.findSmiles(rimage, faces))
         {
-			if (faces.size() == 1)
-            {
-				FaceObject* face = static_cast<FaceObject*>(*(faces.begin()));
-				amount = face->activation;
-				smileFound = true;
-			}
+            for(auto face : faces) {
+                vec.x = face->x;
+                vec.y = face->y;
+                vec.z = face->xSize;
+                vec.w = face->ySize;
+                vecs.push_back(make_pair(vec, face->activation));
+            }
 		}
-
-		return smileFound;
+		return vecs;
 	}
 };
