@@ -7596,27 +7596,27 @@ namespace blink_wts{
 		{498, 8, 0.0f, -2.344174e+02f, 0, 0, 1.244292e-01, RealFun498, Corners498},
 		{499, 12, 0.0f, -1.721232e+01f, 0, 0, 1.696596e+00, RealFun499, Corners499}	};
 
-//void assignData(FeatureData &d);
-    void assignData(FeatureData &d){
-        d.patchsize=23;
-        d.patch_width=45;
-        d.patch_height=23;
-        d.plus_minus_one=0;
-        d.numfeatures=500;
-        d.numcascades=1;
-        d.cascades = casc;
-        d.features = f;
-        d.normOffset.top = 0;
-        d.normOffset.left = 0;
-        d.normOffset.right = 0;
-        d.normOffset.bottom = 0;
-        d.numStdAdjusts=50;
-        d.stdAdjusts = stdAdj;
-        d.real_fun = true;
-        d.nl=64; //// number of bins
-        d.minval = 1; /// fix for matlab vs. C 0-1 indexing bug
-        d.maxval = 64;  /// fix for matlab vs. C 0-1 indexing bug
-    }
+void assignData(FeatureData &d);
+    //void assignData(FeatureData &d){
+    //    d.patchsize=23;
+    //    d.patch_width=45;
+    //    d.patch_height=23;
+    //    d.plus_minus_one=0;
+    //    d.numfeatures=500;
+    //    d.numcascades=1;
+    //    d.cascades = casc;
+    //    d.features = f;
+    //    d.normOffset.top = 0;
+    //    d.normOffset.left = 0;
+    //    d.normOffset.right = 0;
+    //    d.normOffset.bottom = 0;
+    //    d.numStdAdjusts=50;
+    //    d.stdAdjusts = stdAdj;
+    //    d.real_fun = true;
+    //    d.nl=64; //// number of bins
+    //    d.minval = 1; /// fix for matlab vs. C 0-1 indexing bug
+    //    d.maxval = 64;  /// fix for matlab vs. C 0-1 indexing bug
+    //}
 
 };
 
