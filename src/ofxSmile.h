@@ -28,7 +28,7 @@ public:
         vector< pair<ofVec4f, float> > vecs;
 
 	if (!smileFinder.findSmiles(rimage, faces)) {
-            for(auto it = faces.begin(); it != faces.end() ; it++) {
+            for(std::_List_iterator<VisualObject *> it = faces.begin(); it != faces.end() ; it++) {
                 VisualObject* face = *it;
                 vec.x = face->x;
                 vec.y = face->y;
