@@ -128,7 +128,7 @@ typedef long								LONGLONG;
 #define IMAGE_FLIPPED false
 
 //THEO HACK
-#include "FreeImage.h"
+// #include "FreeImage.h"
 
 //typedef struct tagBITMAPFILEHEADER { // bmfh
 //    WORD    bfType;
