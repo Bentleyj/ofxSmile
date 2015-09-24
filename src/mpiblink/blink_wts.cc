@@ -11,26 +11,26 @@
 
 #include "blink_wts.h"
 
-//void blink_wts::assignData(FeatureData &d){
-//	d.patchsize=23;
-//	d.patch_width=45;
-//	d.patch_height=23;
-//	d.plus_minus_one=0;
-//	d.numfeatures=500;
-//	d.numcascades=1;
-//	d.cascades = casc;
-//	d.features = f;
-//	d.normOffset.top = 0;
-//	d.normOffset.left = 0;
-//	d.normOffset.right = 0;
-//	d.normOffset.bottom = 0;
-//	d.numStdAdjusts=50;
-//	d.stdAdjusts = stdAdj;
-//	d.real_fun = true;
-//	d.nl=64; //// number of bins 
-//	d.minval = 1; /// fix for matlab vs. C 0-1 indexing bug
-//	d.maxval = 64;  /// fix for matlab vs. C 0-1 indexing bug
-//}
+void blink_wts::assignData(FeatureData &d){
+	d.patchsize=23;
+	d.patch_width=45;
+	d.patch_height=23;
+	d.plus_minus_one=0;
+	d.numfeatures=500;
+	d.numcascades=1;
+	d.cascades = casc;
+	d.features = f;
+	d.normOffset.top = 0;
+	d.normOffset.left = 0;
+	d.normOffset.right = 0;
+	d.normOffset.bottom = 0;
+	d.numStdAdjusts=50;
+	d.stdAdjusts = stdAdj;
+	d.real_fun = true;
+	d.nl=64; //// number of bins 
+	d.minval = 1; /// fix for matlab vs. C 0-1 indexing bug
+	d.maxval = 64;  /// fix for matlab vs. C 0-1 indexing bug
+}
 
 /*
  * 
