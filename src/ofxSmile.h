@@ -29,7 +29,7 @@ public:
 
 		if (!smileFinder.findSmiles(rimage, faces))
         {
-            for(auto face : faces) {
+            for(VisualObject* face : faces) {
                 vec.x = face->x;
                 vec.y = face->y;
                 vec.z = face->xSize;
