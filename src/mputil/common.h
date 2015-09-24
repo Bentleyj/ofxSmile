@@ -14,10 +14,11 @@
 #ifdef WIN32
 #include <Windows.h>
 #else
-#include <iostream.h>
-#include <sys/time.h>
-#include <pthread.h>
-#include "errno.h"
+//removed by JGB for RPI
+// #include <iostream.h>
+// #include <sys/time.h>
+// #include <pthread.h>
+// #include "errno.h"
 #endif
 #include <iostream>
 #include <algorithm>
